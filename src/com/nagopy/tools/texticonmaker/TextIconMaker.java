@@ -28,7 +28,7 @@ public class TextIconMaker {
 	public String extension;
 
 	/** {@link SerialNumber} */
-	public SerialNumber remban;
+	public SerialNumber serialNumber;
 
 	/** 背景色 */
 	public Color backgroundColor;
@@ -61,7 +61,7 @@ public class TextIconMaker {
 	public TextIconMaker() {
 		extension = ".png";
 		baseFileName = "test";
-		remban = new SerialNumber(1);
+		serialNumber = new SerialNumber(1);
 		backgroundColor = Color.WHITE;
 		textColor = Color.BLACK;
 		font = new Font(Font.SERIF, Font.PLAIN, 9);
@@ -110,11 +110,11 @@ public class TextIconMaker {
 	/**
 	 * 自動生成のファイル名を作成するメソッド.
 	 * 
-	 * @return {@link TextIconMaker#baseFileName} + {@link TextIconMaker#remban}
+	 * @return {@link TextIconMaker#baseFileName} + {@link TextIconMaker#serialNumber}
 	 *         + {@link TextIconMaker#extension}
 	 */
 	private String makeFileName() {
-		return baseFileName + remban.nextString() + extension;
+		return baseFileName + serialNumber.nextString() + extension;
 	}
 
 	/**

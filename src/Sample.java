@@ -27,7 +27,7 @@ public class Sample {
 
 		TextIconMaker iconMaker = new TextIconMaker();
 		iconMaker.font = new Font(Font.SANS_SERIF, Font.PLAIN, 10);
-		iconMaker.remban.setEnabled(false);
+		iconMaker.serialNumber.setEnabled(false);
 		iconMaker.exportDir = "out/sample1/";
 		for (Entry<String, String> entry : map.entrySet()) {
 			iconMaker.createIcon(entry.getValue(), entry.getKey());
