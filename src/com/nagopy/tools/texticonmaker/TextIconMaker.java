@@ -268,11 +268,12 @@ public class TextIconMaker {
 	 * @throws IOException
 	 */
 	private void save(Image image, String fileName) throws IOException {
+		// ディレクトリを作成
+		Files.createDirectories(Paths.get(exportDir));
+
 		Path path = Paths.get(exportDir, fileName);
 		// 作成済みのファイルがあれば削除
 		Files.deleteIfExists(path);
-		// ディレクトリを作成
-		Files.createDirectories(path);
 
 		BufferedImage bufferedImage = createBufferedImage(image);
 		if (!ImageIO.write(bufferedImage, "PNG", path.toFile())) {
