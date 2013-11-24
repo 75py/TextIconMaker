@@ -27,8 +27,8 @@ public class TextIconMaker {
 	 */
 	public String extension;
 
-	/** {@link Remban} */
-	public Remban remban;
+	/** {@link SerialNumber} */
+	public SerialNumber remban;
 
 	/** 背景色 */
 	public Color backgroundColor;
@@ -61,7 +61,7 @@ public class TextIconMaker {
 	public TextIconMaker() {
 		extension = ".png";
 		baseFileName = "test";
-		remban = new Remban(1);
+		remban = new SerialNumber(1);
 		backgroundColor = Color.WHITE;
 		textColor = Color.BLACK;
 		font = new Font(Font.SERIF, Font.PLAIN, 9);

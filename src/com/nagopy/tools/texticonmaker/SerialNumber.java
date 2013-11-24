@@ -3,7 +3,7 @@ package com.nagopy.tools.texticonmaker;
 /**
  * 連番管理クラス.
  */
-public class Remban {
+public class SerialNumber {
 
 	private int number;
 	private boolean enabled;
@@ -12,7 +12,7 @@ public class Remban {
 	 * コンストラクタ.<br>
 	 * 0から開始。
 	 */
-	public Remban() {
+	public SerialNumber() {
 		this(0);
 	}
 
@@ -22,7 +22,7 @@ public class Remban {
 	 * @param start
 	 *            開始番号
 	 */
-	public Remban(int start) {
+	public SerialNumber(int start) {
 		this.number = start;
 		this.enabled = true;
 	}
